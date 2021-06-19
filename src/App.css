@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: rgb(240,240,240);
+}
+.title{
+  margin-top: 4em;
+  text-transform: capitalize;
+  text-align: center ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title h1{
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.underline{
+  height: 5px;
+  background: rgb(26, 84, 241);
+  width: 60px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.btn-container{
+  margin-bottom: 4em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+button{
+  border: solid 1px rgb(26, 84, 241);
+  color:rgb(26, 84, 241) ;
+  padding: 0.7em;
+  text-transform: capitalize;
+  border-radius: 5px;
+  letter-spacing: 0.1em;
+  margin: 0 1em;
+  cursor: pointer;
+  transition: 0.5s ease-in-out; 
+}
+button:hover{
   color: white;
+  background: rgb(26, 84, 241);
+}
+.dish{
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.App-link {
-  color: #61dafb;
+.dish-img{
+  object-fit: cover;
+  width: 400px;
+  border: solid rgb(26, 84, 241); 
+  border-radius: 5px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dish header{
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  border-bottom: dotted 2px rgb(180,180,180);
+  letter-spacing: 0.2em;
+}
+.price{
+  color: rgb(26, 84, 241)
+}
+
+.description{
+  padding-top: 1em;
+  color: rgb(120,120,120);
+}
+
+.dish-all{
+  display: grid;
+  width: 400px;
+  margin: auto;
+  row-gap: 40px;
+}
+
+@media screen and (min-width: 760px){
+  .dish{
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    column-gap: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .dish-all{
+    display: grid;
+    width: 730px;
+    margin: auto;
+    row-gap: 40px;
+  }
+  .dish-img{
+    object-fit: cover;
+    width: 225px;
+    height: 175px;
+    border: solid rgb(26, 84, 241); 
+    border-radius: 5px;
+  }
+  
+}
+
+@media screen and (min-width: 1200px) {
+  .dish-all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+    width: 80vw;
+    margin: auto;
+  }
+  .dish-img{
+    object-fit: cover;
+    width: 225px;
+    height: 175px;
+    border: solid rgb(26, 84, 241); 
+    border-radius: 5px;
   }
 }
